@@ -125,7 +125,7 @@ subcolspace=0mm]{tikzposter}
 \author{
 	\underline{Tuan Vo}$^{\text{a,b}\,\dagger}$, Claas Hüter$^{\text{b}}$, Stefanie Braun$^{\text{a}}$, Manuel Torrilhon$^{\text{a}}$\\
 \normalsize vo@acom.rwth-aachen.de}
-\author{\underline{Tuan Vo}$^{\text{a,b}\,\dagger}$, Claas Hüter$^{\text{b}}$, Stefanie Braun$^{\text{a}}$, Manuel Torrilhon$^{\text{a}}$}
+\author{\underline{Tuan Vo}$^{\text{a,b}\,\dagger}$, Claas Hüter$^{\text{b}}$, Stefanie Braun$^{\text{a}}$}
 \institute{\large
 $\prescript{a}{}{}$Department of Mathematics, Applied and Computational Mathematics (ACoM), 
 RWTH Aachen University, Schinkelstraße 02, 52062 Aachen, Germany\\
@@ -221,6 +221,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 	\begin{minipage}{0.44\textwidth}
 		\begin{center}
 			\inputfig{floats/routine_woTV_spectral_python}{routine_woTV_spectral_python}
+			\inputfig{floats/dendrite_SESSE}{dendrite_SESSE}
 		\end{center}
 	\end{minipage}
 	\vspace{-0.3cm}
@@ -242,6 +243,9 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\end{center}
 			\underline{Distribution}:\! 
 			ana. max. shear stress $\WAsigma^{\Pi}_{x_1x_2}$ around crack tip $a_{c}$.
+			\begin{center}
+				\inputfig{floats/energydensity}{energydensity}
+			\end{center}
 		}
 	}
 	% ---------------------------------------------------------------------------------------------------------------- %
@@ -275,9 +279,9 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\quad
 			\mathbb{G} := \left\{ \BQ_{||_{\Bd}}, \BQ_{\bot_{\Bd}}  \right\} \subset \mathcal{O}(3).
 		\end{align*}
-		\begin{center}
-			\inputfig{floats/dendrite_2parts_nospl_split}{dendrite_2parts_nosample_split}
-		\end{center}
+		% \begin{center}
+		% 	\inputfig{floats/dendrite_SESSE}{dendrite_SESSE}
+		% \end{center}
 		Consequentially, dendrites contribute to 
 		degradation of ionic conductivity
 		and tiny-cracks tracing along grain boundaries.
@@ -288,7 +292,9 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 {
 	\begin{minipage}{0.43\textwidth}
 		\begin{mdframed}
-			\underline{Coupled fields}: Displacement field $\Bu$ and temperature field $\theta$; structural tensor $\BM$
+			\underline{Coupled fields}: 
+			Displacement field $\Bu$ and temperature field $\theta$; 
+			structural tensor $\BM$
 			\begin{align*}
 				\Bu:
 				\begin{cases}
@@ -403,7 +409,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 					f(a,\bm{u},\theta;\lambda,\mu,\bm{d}^{(\star)}\otimes\bm{d}^{(\star)}) \, d\Omega
 					- 
 					\!\!\!\!
-					\bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} 
+					\bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma}
 					\!\!
 					f(a;\gamma) \, d\Gamma
 				}
