@@ -216,6 +216,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			can help 
 			to improve ASSB performance.
 		\end{mdframed}
+		\inputfig{floats/energydensity}{energydensity}
 	\end{minipage}%
 	\hfill
 	\begin{minipage}{0.44\textwidth}
@@ -230,10 +231,12 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 \begin{columns}
 	\column{0.34}{
 		\block{(SE|SSE)-Interface Analysis}{
-			\textbf{Interface} between solid electrode and solid-state electrolyte (SE|SSE) 
+			\textbf{Interface} between solid electrode and 
+			solid-state electrolyte (SE|SSE) 
 			taking place at space charge layer (SCL) \cite{braun2015}
 			found in ASSBs 
-			critically exhibits mechanical and electrochemical instability \cite{hueter2017}. 
+			critically exhibits mechanical and 
+			electrochemical instability \cite{hueter2017}. 
 			This evidence points directly to the fact that 
 			the soft metallic li anode 
 			is erroneously prone to triggering dendrites, 
@@ -244,7 +247,8 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\underline{Distribution}:\! 
 			ana. max. shear stress $\WAsigma^{\Pi}_{x_1x_2}$ around crack tip $a_{c}$.
 			\begin{center}
-				\inputfig{floats/energydensity}{energydensity}
+				% 	\inputfig{floats/energydensity}{energydensity}
+				\inputfig{floats/characsin_rotate_semicircle_135246mix}{characsin_rotate_semicircle_135246mix}
 			\end{center}
 		}
 	}
@@ -256,7 +260,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 		\begin{center}
 			\inputfig{floats/batt3dswell_scaled_2ways_discharging_color}{batt3dswell_scaled_2ways_discharging_color}
 			% \inputfig{floats/dendrite_pdirection_battonly}{dendrite_pdirection_battonly}
-			\inputfig{floats/space_charge_layer}{space_charge_layer}
+			% \inputfig{floats/space_charge_layer}{space_charge_layer}
 			% \inputfig{floats/space_charge_layer_Epotential}{space_charge_layer_Epotential}
 		\end{center}
 		$\checkmark$ \textbf{Thermodynamic consistency} is satisfied, followed by \cite{braun2015}.\\
@@ -264,9 +268,10 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 	}
 	% ---------------------------------------------------------------------------------------------------------------- %
 	\column{0.322}
-	\block{Embedded structural-tensor in SSE}
+	\block{Space-charge Layer}
 	{
-		\textbf{Polycrystalline} garnet-type SSE \cite{kim2022}
+		\textbf{Polycrystalline}
+		garnet-type SSE \cite{kim2022}
 		such as LLZO 
 		exhibit grain boundary network, 
 		and grains with variation of $\left\{ \text{size, shape} \right\}$
@@ -283,9 +288,10 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\mathbb{G} := \left\{ \BQ_{||_{\Bd}}, \BQ_{\bot_{\Bd}}  \right\} \subset \mathcal{O}(3).
 		\end{align*}
 		\begin{center}
-			% 	\inputfig{floats/dendrite_SESSE}{dendrite_SESSE}
+			% \inputfig{floats/dendrite_SESSE}{dendrite_SESSE}
 			% \inputfig{floats/space_charge_layer}{space_charge_layer}
-			\inputfig{floats/space_charge_layer_Epotential}{space_charge_layer_Epotential}
+			\inputfig{floats/space_charge_layer_merged}{space_charge_layer_merged}
+			% \inputfig{floats/space_charge_layer_Epotential}{space_charge_layer_Epotential}
 		\end{center}
 		Consequentially, dendrites contribute to 
 		degradation of ionic conductivity
@@ -325,7 +331,8 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\end{align*}
 			Governing conservation equations
 			\begin{align*}
-				\frac{d}{dt} \int_{\Omega}(\cdot)\ d\Omega = \int_{\Omega}(\cdot)^{\text{\tiny action}}\ d\Omega 
+				\frac{d}{dt} \int_{\Omega}(\cdot)\ d\Omega 
+				= \int_{\Omega}(\cdot)^{\text{\tiny action}}\ d\Omega 
 				+ \int_{\partial\Omega}(\cdot)^{\text{\tiny action}}\ d\partial\Omega  
 				+ \int_{\Omega}(\cdot)^{\text{\tiny production (+/-)}}\ d\Omega
 			\end{align*}
@@ -391,7 +398,8 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 		\end{minipage}
 		%
 		\begin{mdframed}
-			Therefore, the governing problem of dendritic nucleation at (SE|SSE) takes the form
+			Therefore, the governing problem of dendritic nucleation at 
+			(SE|SSE) takes the form
 			\begin{align}
 				 & 
 				\cancel{\partial_{t}\bm{u}}
@@ -449,7 +457,9 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				\end{cases}
 			\end{align*}
 			\vspace{-0.3cm}
-			where $a$ the crevice length, $p_{h}$ pressure at the opening crevice on dendritic interface, and $\forall \, \{p_{h},a\}\in\mbR_{+}$.
+			where $a$ the crevice length, 
+			$p_{h}$ pressure at the opening crevice on dendritic interface, 
+			and $\forall \, \{p_{h},a\}\in\mbR_{+}$.
 		\end{mdframed}
 		\begin{minipage}{0.7\textwidth}
 			\begin{mdframed}
