@@ -154,8 +154,10 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 %\definecolor{sub}{HTML}{8CDBFF}
 %\usecolorstyle[colorOne=sub, colorTwo=main]{Default}
 
-
 \definecolor{myoxford}{HTML}{002147}
+
+\definecolor{blueoxford}{HTML}{002147}
+\definecolor{redstanford}{HTML}{8C1515}
 
 % ---------------------------------------------------------------------------------------------------------------- %
 \begin{document}
@@ -179,7 +181,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				hence, flammable and explosive, which is undesirable. 
 				% \colorbox{pink}{undesirable}.
 				This bottleneck is
-				mainly due to \textcolor{red}{liquid-based electrolyte} 
+				mainly due to \textcolor{redstanford}{liquid-based electrolyte}
 				found in c-LIBs.
 			\end{mdframed}
 		\end{minipage}
@@ -188,7 +190,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\begin{mdframed}
 				\textbf{All-solid-state battery} (ASSB) is 
 				one of promising candidates to overcome bottlenecks of c-LIBs. 
-				Thanks to \textcolor{red}{solid-state electrolyte} (SSE),
+				Thanks to \textcolor{redstanford}{solid-state electrolyte} (SSE),
 				ASSB is highly stable towards temperature and pressure. 
 				Nevertheless, Li-metal dendrite 
 				triggered at (SE|SSE)-Interface
@@ -204,7 +206,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 		%
 		\begin{mdframed}
 			\textbf{Next-generation All-solid-state battery} (ng-ASSB)
-			with a consideration of \textcolor{red}{nucleation criterion} defined by
+			with a consideration of \textcolor{redstanford}{nucleation criterion} defined by
 			% \begin{align*}
 			% 	a_{\text{Griffith}} := a^{*} = \arg\min_{a\in\mathbb{R}}{\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega} f(a,\bm{u},\theta;\lambda,\mu,\bm{d}^{(\star)}\otimes\bm{d}^{(\star)}) \, d\Omega - \bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} f(a;\gamma) \, d\Gamma}\Bigg|_{\bar{\bm{u}}}
 			% \end{align*}
@@ -256,8 +258,8 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 		%
 		\begin{mdframed}
 			\textbf{Aim}: 
-			The study is with the purpose of getting a better insight into 
-			dendrite formation in ASSB
+			The study is with the purpose of 
+			getting a better insight into dendrite nucleation and formation in ASSB.
 		\end{mdframed}
 	\end{minipage}%
 	\hfill
@@ -282,7 +284,6 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			% \inputfig{floats/space_charge_layer}{space_charge_layer}
 			% \inputfig{floats/space_charge_layer_Epotential}{space_charge_layer_Epotential}
 		\end{center}
-		text
 		% $\checkmark$ \textbf{Thermodynamic consistency} is satisfied, followed by \cite{braun2015}.\\
 		% $\checkmark$ \textbf{Closure} $\bar{\Omega}$ is fulfilled by 15 moments, followed by \cite{torrilhon2016}.
 	}
@@ -290,7 +291,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 	\column{0.322}
 	\block{Space-charge Layer}
 	{
-		\textbf{Space-charge Layer} \cite{braun2015}
+		\textbf{Space-charge Layer} presents in ASSB \cite{braun2015}.
 		% garnet-type SSE \cite{kim2022}
 		% such as LLZO 
 		% exhibit grain boundary network, 
@@ -336,7 +337,6 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			% \inputfig{floats/maxshear_9figs_456}{maxshear_9figs_456}
 			\inputfig{floats/energydensity}{energydensity}
 		\end{center}
-		text
 		% \underline{Distribution}:\! 
 		% ana. max. shear stress $\WAsigma^{\Pi}_{x_1x_2}$ around crack tip $a_{c}$.
 		% \begin{center}
@@ -442,10 +442,10 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 					deformation of SSE
 					due to dendrite formation 
 					at (SE|SSE)-interface 
-					% \begin{align*}
-					% 	\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega}
-					% 	f(a,\bm{u};\lambda,\mu,\bm{d}\otimes\bm{d}) \, d\Omega 
-					% \end{align*}
+					\begin{align*}
+						\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega}
+						f(a,\bm{u};\lambda,\mu,\bm{d}\otimes\bm{d}) \, d\Omega 
+					\end{align*}
 				\end{mdframed}
 			\end{minipage}
 			\hfill 
@@ -456,9 +456,9 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 					the open crevice 
 					cracking at (SE|SSE)-interface
 					affected by prescribed pressure
-					% \begin{align*} 
-					% 	\bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} f(a;\gamma) \, d\Gamma
-					% \end{align*}
+					\begin{align*} 
+						\bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} f(a;\gamma) \, d\Gamma
+					\end{align*}
 				\end{mdframed}
 			\end{minipage}
 			%
@@ -667,53 +667,53 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\small
 			
 			\bibitem{vo2023}
-			\textbf{T.Vo}, C.Hüter, S.Braun, M.Torrilhon,
+			\textbf{T.\,Vo}, C.Hüter, S.Braun, M.Torrilhon,
 			\emph{Math. modelling for ASSB: (SE$|$SSE)-Interface}.
 			Poster, Oxford Batt. Modelling Symposium, University of Oxford, OBMS23, P. 66, \textbf{2023}.
 			
 			\bibitem{vo2023}
-			\textbf{T.Vo}, C.Hüter, S.Braun, M.Torrilhon,
+			\textbf{T.\,Vo}, C.Hüter, S.Braun, M.Torrilhon,
 			\emph{Next-generation All-solid-state Battery (\#ASSB)}.
 			Poster, SIAM Computational Science and Eng. Conference, CSE23, Amsterdam, \textbf{2023}.
 			
 			\bibitem{vo2022}
-			\textbf{T.Vo}, 
+			\textbf{T.\,Vo}, 
 			\emph{Math. modelling for ASSB}.
 			Presentation, Numerical Modelling in Applied Physics with OpenFOAM Summer School, NUMAP-FOAM, University of Cambridge, \textbf{2022}.
 			
 			\bibitem{vo2020}
-			\textbf{T.Vo}, C.Hüter, S.Braun, R.Spatschek, 
+			\textbf{T.\,Vo}, C.Hüter, S.Braun, R.Spatschek, 
 			\emph{Mathematical modelling for All-solid-state battery: Griffith criterion}.
 			Doctoral presentation, IEK-2, Forschungszentrum Jülich, \textbf{2020}.
 			
 			\bibitem{vo2018}
-			\textbf{T.Vo},
+			\textbf{T.\,Vo},
 			\emph{Modeling the swelling phenomena of li-ion batt. cells based on a numerical chemo-mech. coupled approach}.
 			Master thesis, Robert Bosch Battery Systems GmbH, \textbf{2018}.
 			
 			\bibitem{vo2015}
-			\textbf{T.Vo}, A.Gallet-Segarra, C.Bertsch,
+			\textbf{T.\,Vo}, A.Gallet-Segarra, C.Bertsch,
 			\emph{Integration of Modelica powertrain models into Hardware in the loop env.}.
 			PreMaster, Robert Bosch GmbH, FEBER, EAM-P2695, \textbf{2015}.
 			
 			\bibitem{vo2014}
-			\textbf{T.Vo},
+			\textbf{T.\,Vo},
 			\emph{Simulation environment for NTC-based voltage drop reduction in Start/Stop appl. and its optimization}.
 			Semiconductor.
 			Bachelor thesis, Robert Bosch GmbH, \textbf{2014}.
 			
 			\bibitem{braun2015}
-			\textbf{S.Braun}, C.Yada, A.Latz,
+			\textbf{S.\,Braun}, C.Yada, A.Latz,
 			\emph{Thermodynamically consistent model for Space-Charge-Layer formation in a solid electrolyte}.
 			J. Physical Chemistry C, 119, 22281-22288, \textbf{2015}.
 			
 			\bibitem{hueter2020}
-			\textbf{C.Hüter}, X.Yin, T.Vo, S.Braun,
+			\textbf{C.\,Hüter}, X.Yin, T.Vo, S.Braun,
 			\emph{A pragmatic dataset augmentation approach for transformation temp. prediction in steels}. 
 			Comp. Mat. Science, Vol. 176, 109488, \textbf{2020}.
 			
 			\bibitem{hueter2017}
-			\textbf{C.Hüter}, S.Fu, M.Finsterbusch, E.Figgemeier, L.Wells, and R.Spatschek,
+			\textbf{C.\,Hüter}, S.Fu, M.Finsterbusch, E.Figgemeier, L.Wells, and R.Spatschek,
 			\emph{Electrode-electrolyte interface stability in SSE system.
 				% influence of coating thickness under varying residual stresses
 			}
@@ -762,21 +762,51 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 		% Dr.\,M.Kirchhart
 		% for a duration
 		% between SS19 and SS23.
-		T.\,Vo would like to extend 
-		heartfelt gratitude
-		to the JARA-CSD research project,
-		spearheaded by Dr.\,S.\,Braun and Dr.\,C.\,Hüter, 
-		for their invaluable support.
-		Additionally, 
-		T.\,Vo would like to say thank to 
-		Prof.\,Dr.\,R.\,Spatschek for the host at IEK-2 
-		in FZ Jülich.
-		Furthermore,
-		T.\,Vo's teaching assistant experience
-		in the courses of 
-		Mathematische Grundlagen I, II, III, IV, and NumPDE
-		at Computational Engineering Science (CES) at 
-		RWTH Aachen University
+		%
+		% T.\,Vo would like to extend 
+		% heartfelt gratitude
+		% to the JARA-CSD research project,
+		% spearheaded by Dr.\,S.\,Braun and Dr.\,C.\,Hüter, 
+		% for their invaluable support.
+		% Additionally, 
+		% T.\,Vo would like to say thank to 
+		% Prof.\,Dr.\,R.\,Spatschek for the host at IEK-2 
+		% in FZ Jülich.
+		% Furthermore,
+		% T.\,Vo's teaching assistant experience
+		% in the courses of 
+		% Mathematische Grundlagen I, II, III, IV, and NumPDE
+		% at Computational Engineering Science (CES) at 
+		% RWTH Aachen University
+		% was made possible
+		% thanks to the guidance and mentorship of
+		% Prof.\,Dr.\,M.\,Torrilhon,
+		% Prof.\,Dr.\,M.\,Schlottke-Lakemper,
+		% Dr.\,R.\,Speck,
+		% Prof.\,Dr.\,B.\,Berkels,
+		% Dr.\,S.\,Braun,
+		% Prof.\,Dr.\,J.\,Kowalski,
+		% Dr.\,A.\,Jha,
+		% Prof.\,Dr.\,B.\,Stamm,
+		% Dr.\,A.\,Litvinenko, and
+		% Dr.\,M.\,Kirchhart,
+		% spanning from the
+		% Summer Semester of 2019 to the
+		% Summer Semester of 2023.
+		%
+		T.\,Vo expresses sincere gratitude 
+		to the JARA-CSD research project, 
+		led by 
+		Dr.\,S.\,Braun and 
+		Dr.\,C.\,Hüter, 
+		for their crucial support. 
+		Special thanks to 
+		Prof.\,Dr.\,R.\,Spatschek 
+		for hosting at IEK-2, FZ Jülich. 
+		Moreover, T.\,Vo's role as a teaching assistant in 
+		Mathematische Grundlagen I, II, III, IV, and NumPDE at 
+		Computational Engineering Science (CES), 
+		RWTH Aachen University (2019-2023), 
 		was made possible
 		thanks to the guidance and mentorship of
 		Prof.\,Dr.\,M.\,Torrilhon,
@@ -788,11 +818,8 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 		Dr.\,A.\,Jha,
 		Prof.\,Dr.\,B.\,Stamm,
 		Dr.\,A.\,Litvinenko, and
-		Dr.\,M.\,Kirchhart,
-		spanning from the
-		Summer Semester of 2019 to the
-		Summer Semester of 2023.
-		\vspace{-11mm}
+		Dr.\,M.\,Kirchhart.
+		% \vspace{-8mm}
 	}
 \end{columns}
 % ----------------------------------------------------------------------------------------------------------------
@@ -844,6 +871,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 	% \vspace{-0.6em}
 	%
 	% \vspace{-0.05em}
+	\vspace{-1mm}
 	\begin{minipage}{0.1\textwidth}
 		\begin{flushright}
 			\includegraphics[width=1.1\textwidth]{./floats/logos/bosch_spring_school_2024Mar.eps}
@@ -874,6 +902,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\includegraphics[width=0.5\textwidth]{./floats/logos/fzj.eps}
 		\end{flushleft}
 	\end{minipage}
+	\vspace{-5mm}
 }
 \end{document}
 % ----------------------------------------------------------------------------------------------------------------
