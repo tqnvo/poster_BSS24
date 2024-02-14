@@ -201,205 +201,9 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 		\begin{mdframed}
 			\textbf{Next-generation All-solid-state battery} (ng-ASSB)
 			with a consideration of \textcolor{red}{nucleation criterion} defined by
-			\begin{align*}
-				a_{\text{Griffith}} := a^{*} = \arg\min_{a\in\mathbb{R}}{\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega} f(a,\bm{u},\theta;\lambda,\mu,\bm{d}^{(\star)}\otimes\bm{d}^{(\star)}) \, d\Omega - \bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} f(a;\gamma) \, d\Gamma}\Bigg|_{\bar{\bm{u}}}
-			\end{align*}
-			where 
-			$\Bu$ displacement field, 
-			$\theta$ temperature field, 
-			$a$ crevice length,
-			$\lambda, \mu$ Lam\'{e} constants,
-			$\Bd^{(\star)}\otimes\Bd^{(\star)}$ embedded misorientation structural tensor,
-			and 
-			$\gamma$ cracking-surface energy density,
-			% \colorbox{pink}{can help} 
-			can help 
-			to improve ASSB performance.
-		\end{mdframed}
-		\inputfig{floats/energydensity}{energydensity}
-	\end{minipage}%
-	\hfill
-	\begin{minipage}{0.44\textwidth}
-		\begin{center}
-			\inputfig{floats/routine_woTV_spectral_python}{routine_woTV_spectral_python}
-			\inputfig{floats/dendrite_SESSE}{dendrite_SESSE}
-		\end{center}
-	\end{minipage}
-	\vspace{-0.3cm}
-}
-% ---------------------------------------------------------------------------------------------------------------- %
-\begin{columns}
-	\column{0.34}{
-		\block{(SE|SSE)-Interface Analysis}{
-			\textbf{Interface} between solid electrode and 
-			solid-state electrolyte (SE|SSE) 
-			taking place at space charge layer (SCL) \cite{braun2015}
-			found in ASSBs 
-			critically exhibits mechanical and 
-			electrochemical instability \cite{hueter2017}. 
-			This evidence points directly to the fact that 
-			the soft metallic li anode 
-			is erroneously prone to triggering dendrites, 
-			under cycles of electric charge \& discharge \cite{kim2022}.
-			\begin{center}
-				\inputfig{floats/maxshear_9figs_456}{maxshear_9figs_456}
-			\end{center}
-			\underline{Distribution}:\! 
-			ana. max. shear stress $\WAsigma^{\Pi}_{x_1x_2}$ around crack tip $a_{c}$.
-			\begin{center}
-				% 	\inputfig{floats/energydensity}{energydensity}
-				\inputfig{floats/characsin_rotate_semicircle_135246mix}{characsin_rotate_semicircle_135246mix}
-			\end{center}
-		}
-	}
-	% ---------------------------------------------------------------------------------------------------------------- %
-	\column{0.338}
-	\block{Next-generation All-solid-state battery}
-	{
-		\textbf{Nucleation} criterion governs the instable (SE|SSE)-interface \cite{hueter2017}
-		\begin{center}
-			\inputfig{floats/batt3dswell_scaled_2ways_discharging_color}{batt3dswell_scaled_2ways_discharging_color}
-			% \inputfig{floats/dendrite_pdirection_battonly}{dendrite_pdirection_battonly}
-			% \inputfig{floats/space_charge_layer}{space_charge_layer}
-			% \inputfig{floats/space_charge_layer_Epotential}{space_charge_layer_Epotential}
-		\end{center}
-		$\checkmark$ \textbf{Thermodynamic consistency} is satisfied, followed by \cite{braun2015}.\\
-		$\checkmark$ \textbf{Closure} $\bar{\Omega}$ is fulfilled by 15 moments, followed by \cite{torrilhon2016}.
-	}
-	% ---------------------------------------------------------------------------------------------------------------- %
-	\column{0.322}
-	\block{Space-charge Layer}
-	{
-		\textbf{Polycrystalline}
-		garnet-type SSE \cite{kim2022}
-		such as LLZO 
-		exhibit grain boundary network, 
-		and grains with variation of $\left\{ \text{size, shape} \right\}$
-		under microscopic observation.
-		Hence, this microstructure is
-		potentially prone to
-		nuances of destruction.
-		% ceramic-like materials.
-		\begin{align*}
-			\BM = \Bd^{(\star)}_{G_1} \otimes \Bd^{(\star)}_{G_2}
-			\quad 
-			\text{given by}
-			\quad
-			\mathbb{G} := \left\{ \BQ_{||_{\Bd}}, \BQ_{\bot_{\Bd}}  \right\} \subset \mathcal{O}(3).
-		\end{align*}
-		\begin{center}
-			% \inputfig{floats/dendrite_SESSE}{dendrite_SESSE}
-			% \inputfig{floats/space_charge_layer}{space_charge_layer}
-			\inputfig{floats/space_charge_layer_merged}{space_charge_layer_merged}
-			% \inputfig{floats/space_charge_layer_Epotential}{space_charge_layer_Epotential}
-		\end{center}
-		Consequentially, dendrites contribute to 
-		degradation of ionic conductivity
-		and tiny-cracks tracing along grain boundaries.
-	}
-\end{columns}
-% ---------------------------------------------------------------------------------------------------------------- %
-\block{Nucleation interface: Taking place at the critically dendritic (SE|SSE)-interface}
-{
-	\begin{minipage}{0.43\textwidth}
-		\begin{mdframed}
-			\underline{Coupled fields}: 
-			Displacement field $\Bu$ and temperature field $\theta$; 
-			structural tensor $\BM$
-			\begin{align*}
-				\Bu:
-				\begin{cases}
-					\Omega \times \mathbb{R}_{+} \rightarrow \mathbb{R}^3, \\
-					(\Bx,t) \mapsto \Bu(\Bx,t),
-				\end{cases}
-				%
-				\theta:
-				\begin{cases}
-					\Omega \times \mathbb{R}_{+} \rightarrow \mathbb{R}, \\
-					(\Bx,t) \mapsto \theta(\Bx,t),
-				\end{cases}
-				%
-				\BM^{\{RR,RE\}}_{i=1,\dots,N}:
-				\begin{cases}
-					% \left( 
-					\Bd^{R}_{\text{\tiny Grain i}} \otimes \Bd^{R}_{\text{\tiny Grain i}} 
-					% \right)
-					% \!\!\big|_{\tiny{i=1,\dots,N}}
-					\\
-					\Bd^{R}_{\text{\tiny Grain i}} \otimes \Bd^{E}
-				\end{cases}
-			\end{align*}
-			Governing conservation equations
-			\begin{align*}
-				\frac{d}{dt} \int_{\Omega}(\cdot)\ d\Omega 
-				= \int_{\Omega}(\cdot)^{\text{\tiny action}}\ d\Omega 
-				+ \int_{\partial\Omega}(\cdot)^{\text{\tiny action}}\ d\partial\Omega  
-				+ \int_{\Omega}(\cdot)^{\text{\tiny production (+/-)}}\ d\Omega
-			\end{align*}
-			used to describe balance of mass, 
-			conservation of linear momentum, 
-			conservation of angular momentum,
-			and conservation of energy
-			with
-			$\rho(\Bx,t)$ is mass density per unit volume (puv); 
-			$\Bb(\Bx,t)$ body force puv; 
-			$\Bv(\Bx,t)$ velocity; 
-			$e(\Bx,t)$ internal energy puv; 
-			$\Bq(\Bx,t)$ heat flux; 
-			$r(\Bx,t)$ heat source puv; 
-			$\Bsigma$ Cauchy stress and 
-			$\Bvarepsilon$ infinitesimal strain.
-			Then, the governing partial differential equation (PDE) 
-			for the thermodynamically consistent coupled problem
-			with deformation field $\Bu$ as its variable
-			takes the form
-			\begin{align*}
-				\partial_{t}\bm{u}
-				+
-				\nabla \cdot
-				\Big(
-				\accentset{\scriptstyle 4}{\mathbb{C}}^{f_{\text{alocation}}(\lambda,\mu,\Bd^{R}_{G_i, i=1,\dots,N},\Bd^{E};\Bx)}
-				:\nabla\Bu^{(s)}
-				\Big)
-				+ \rho\Bb
-				= -\rho\nabla V_{e},
-			\end{align*}
-			where $V_{e}: \mathbb{R}^{3}\to\mathbb{R}$
-			is the electric potential applied globally on ASSB.
-			Due to nature setting of ASSB taking the form 
-			(SE|SSE|SE)
-			the electric potential becomes uniform.\\
-			\vspace{-0.6cm}
-		\end{mdframed}
-		\begin{minipage}{0.5\textwidth}
-			\begin{mdframed}
-				\textbf{Strain energy} is based on the 
-				deformation of SSE
-				due to dendrite formation 
-				at (SE|SSE)-interface 
-				\begin{align*}
-					\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega}
-					f(a,\bm{u};\lambda,\mu,\bm{d}\otimes\bm{d}) \, d\Omega 
-				\end{align*}
-			\end{mdframed}
-		\end{minipage}
-		\hfill 
-		\begin{minipage}{0.49\textwidth}
-			\begin{mdframed}
-				\textbf{Surface energy}
-				is analysized based on
-				the open crevice 
-				cracking at (SE|SSE)-interface
-				affected by prescribed pressure
-				\begin{align*} 
-					\bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} f(a;\gamma) \, d\Gamma
-				\end{align*}
-			\end{mdframed}
-		\end{minipage}
-		%
-		\begin{mdframed}
-			Therefore, the governing problem of dendritic nucleation at 
-			(SE|SSE) takes the form
+			% \begin{align*}
+			% 	a_{\text{Griffith}} := a^{*} = \arg\min_{a\in\mathbb{R}}{\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega} f(a,\bm{u},\theta;\lambda,\mu,\bm{d}^{(\star)}\otimes\bm{d}^{(\star)}) \, d\Omega - \bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} f(a;\gamma) \, d\Gamma}\Bigg|_{\bar{\bm{u}}}
+			% \end{align*}
 			\begin{align}
 				 & 
 				\cancel{\partial_{t}\bm{u}}
@@ -428,121 +232,399 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				}
 				\Big|_{\bar{\bm{u}}}
 			\end{align}
-			where deformation $\bar{\Bu}$ is (i) based on (1), 
-			and then (ii) for \emph{Griffith}-analysis in (2).
+			where $V_{e}: \mathbb{R}^{3}\to\mathbb{R}$
+			is the electric potential applied globally on ASSB.
+			Due to nature setting of ASSB taking the form 
+			(SE|SSE|SE)
+			the electric potential becomes uniform.
+			Additionally,
+			$\Bu$ is the displacement field, 
+			$\theta$ temperature field, 
+			$a$ crevice length,
+			$\lambda, \mu$ Lam\'{e} constants,
+			$\Bd^{(\star)}\otimes\Bd^{(\star)}$ embedded misorientation structural tensor,
+			and 
+			$\gamma$ cracking-surface energy density,
+			% \colorbox{pink}{can help} 
+			can help 
+			to improve ASSB performance.
 		\end{mdframed}
-	\end{minipage}
+	\end{minipage}%
 	\hfill
-	\begin{minipage}{0.54\textwidth}
-		\begin{mdframed}
-			Analysis: \textit{Airy-Westergaard} fcn. used for stress analysis:
-			(i) max. shear stress and (ii) principal stresses
-			\vspace{-0.2cm}
-			\begin{align*}
-				\WA:
-				\begin{cases}
-					\mbC\to\mbC, \\
-					\displaystyle
-					z \mapsto \WAz:=
-					\Re(\bigoiintsssss_{\Gamma} \mcK^{(\star)}\,dz )
-					+ x_2\,
-					\Im(\bigointssss_{\Gamma} \mcK^{(\star)}\,dz ),
-				\end{cases}
-				\mcK^{(\star)}:
-				\begin{cases}
-					\mbC \to \mbC, \\
-					z \mapsto 
-					\mcK^{(\star)}:=
-					- p_{h} + p_{h}/\sqrt{1 - a^2/z^2},\
-				\end{cases}
-			\end{align*}
-			\vspace{-0.3cm}
-			where $a$ the crevice length, 
-			$p_{h}$ pressure at the opening crevice on dendritic interface, 
-			and $\forall \, \{p_{h},a\}\in\mbR_{+}$.
-		\end{mdframed}
-		\begin{minipage}{0.7\textwidth}
+	\begin{minipage}{0.44\textwidth}
+		\begin{center}
+			\inputfig{floats/routine_woTV_spectral_python}{routine_woTV_spectral_python}
+			\inputfig{floats/dendrite_SESSE}{dendrite_SESSE}
+		\end{center}
+	\end{minipage}
+	\vspace{-0.3cm}
+}
+% ---------------------------------------------------------------------------------------------------------------- %
+\begin{columns}
+	\column{0.34}
+	\block{Next-generation All-solid-state battery}
+	{
+		\textbf{Nucleation} criterion governs the instable (SE|SSE)-interface \cite{hueter2017}
+		\begin{center}
+			\inputfig{floats/batt3dswell_scaled_2ways_discharging_color}{batt3dswell_scaled_2ways_discharging_color}
+			% \inputfig{floats/dendrite_pdirection_battonly}{dendrite_pdirection_battonly}
+			% \inputfig{floats/space_charge_layer}{space_charge_layer}
+			% \inputfig{floats/space_charge_layer_Epotential}{space_charge_layer_Epotential}
+		\end{center}
+		% $\checkmark$ \textbf{Thermodynamic consistency} is satisfied, followed by \cite{braun2015}.\\
+		% $\checkmark$ \textbf{Closure} $\bar{\Omega}$ is fulfilled by 15 moments, followed by \cite{torrilhon2016}.
+	}
+	% ---------------------------------------------------------------------------------------------------------------- %
+	\column{0.322}
+	\block{Space-charge Layer}
+	{
+		\textbf{Space-charge Layer}
+		% garnet-type SSE \cite{kim2022}
+		% such as LLZO 
+		% exhibit grain boundary network, 
+		% and grains with variation of $\left\{ \text{size, shape} \right\}$
+		% under microscopic observation.
+		% Hence, this microstructure is
+		% potentially prone to
+		% nuances of destruction.
+		% ceramic-like materials.
+		% \begin{align*}
+		% 	\BM = \Bd^{(\star)}_{G_1} \otimes \Bd^{(\star)}_{G_2}
+		% 	\quad 
+		% 	\text{given by}
+		% 	\quad
+		% 	\mathbb{G} := \left\{ \BQ_{||_{\Bd}}, \BQ_{\bot_{\Bd}}  \right\} \subset \mathcal{O}(3).
+		% \end{align*}
+		\begin{center}
+			% \inputfig{floats/dendrite_SESSE}{dendrite_SESSE}
+			% \inputfig{floats/space_charge_layer}{space_charge_layer}
+			\inputfig{floats/space_charge_layer_merged}{space_charge_layer_merged}
+			% \inputfig{floats/space_charge_layer_Epotential}{space_charge_layer_Epotential}
+		\end{center}
+		% Consequentially, dendrites contribute to 
+		% degradation of ionic conductivity
+		% and tiny-cracks tracing along grain boundaries.
+	}
+	% ---------------------------------------------------------------------------------------------------------------- %
+	\column{0.338}
+	\block{Energy density demand landscape}{
+		\textbf{Interface} between solid electrode and 
+		solid-state electrolyte (SE|SSE) 
+		taking place at space charge layer (SCL) \cite{braun2015}
+		% found in ASSBs 
+		critically exhibits mechanical and 
+		electrochemical instability \cite{hueter2017}. 
+		% This evidence points directly to the fact that 
+		% the soft metallic li anode 
+		% is erroneously prone to triggering dendrites, 
+		% under cycles of electric charge \& discharge 
+		% \cite{kim2022}.
+		\begin{center}
+			% \inputfig{floats/maxshear_9figs_456}{maxshear_9figs_456}
+			\inputfig{floats/energydensity}{energydensity}
+		\end{center}
+		% \underline{Distribution}:\! 
+		% ana. max. shear stress $\WAsigma^{\Pi}_{x_1x_2}$ around crack tip $a_{c}$.
+		% \begin{center}
+		% 	% 	\inputfig{floats/energydensity}{energydensity}
+		% 	\inputfig{floats/characsin_rotate_semicircle_135246mix}{characsin_rotate_semicircle_135246mix}
+		% \end{center}
+	}
+\end{columns}
+
+%---------------------------------------------------------------------------------------------------------------- %
+\begin{columns}
+	\column{0.24}
+	{
+		\block{Artificial Neural Networks}
+		{
+			Application: Steel property prediction \cite{hueter2020}
+		}
+		
+		\block{Semiconductor}
+		{
+			Application: Start/Stop Starter \cite{vo2014}
+		}
+	}
+	
+	\column{0.76}
+	\block{Nucleation interface: Taking place at the critically dendritic (SE|SSE)-interface}
+	% \block{Nucleation interface}
+	{
+		\begin{minipage}{0.35\textwidth}
 			\begin{mdframed}
-				Boundary conditions applied on a solid-state object
-				\begin{center}
-					\inputfig{floats/structuraltwofields}{structuraltwofields}
-				\end{center}
+				% \inputfig{floats/characsin_rotate_semicircle_135246mix_vertical}{characsin_rotate_semicircle_135246mix_vertical}
+				\textbf{Coupled fields} are  
+				Displacement field $\Bu$ and temperature field $\theta$; 
+				% structural tensor $\BM$
+				\begin{align*}
+					\Bu:
+					\begin{cases}
+						\Omega \times \mathbb{R}_{+} \rightarrow \mathbb{R}^3, \\
+						(\Bx,t) \mapsto \Bu(\Bx,t),
+					\end{cases}
+					%
+					\theta:
+					\begin{cases}
+						\Omega \times \mathbb{R}_{+} \rightarrow \mathbb{R}, \\
+						(\Bx,t) \mapsto \theta(\Bx,t),
+					\end{cases}
+					%
+					% \BM^{\{RR,RE\}}_{i=1,\dots,N}:
+					% \begin{cases}
+					% 	% \left( 
+					% 	\Bd^{R}_{\text{\tiny Grain i}} \otimes \Bd^{R}_{\text{\tiny Grain i}} 
+					% 	% \right)
+					% 	% \!\!\big|_{\tiny{i=1,\dots,N}}
+					% 	\\
+					% 	\Bd^{R}_{\text{\tiny Grain i}} \otimes \Bd^{E}
+					% \end{cases}
+				\end{align*}
+				Governing conservation equations
+				% \begin{align*}
+				% 	\frac{d}{dt} \int_{\Omega}(\cdot)\ d\Omega 
+				% 	= \int_{\Omega}(\cdot)^{\text{\tiny action}}\ d\Omega 
+				% 	+ \int_{\partial\Omega}(\cdot)^{\text{\tiny action}}\ d\partial\Omega  
+				% 	+ \int_{\Omega}(\cdot)^{\text{\tiny production (+/-)}}\ d\Omega
+				% \end{align*}
+				used to describe balance of mass, 
+				conservation of linear momentum, 
+				conservation of angular momentum,
+				and conservation of energy
+				with
+				$\rho(\Bx,t)$ is mass density per unit volume (puv); 
+				$\Bb(\Bx,t)$ body force puv; 
+				$\Bv(\Bx,t)$ velocity; 
+				$e(\Bx,t)$ internal energy puv; 
+				$\Bq(\Bx,t)$ heat flux; 
+				$r(\Bx,t)$ heat source puv; 
+				$\Bsigma$ Cauchy stress and 
+				$\Bvarepsilon$ infinitesimal strain.
+				% Then, the governing partial differential equation (PDE) 
+				% for the thermodynamically consistent coupled problem
+				% with deformation field $\Bu$ as its variable
+				% takes the form
+				% \begin{align*}
+				% 	\partial_{t}\bm{u}
+				% 	+
+				% 	\nabla \cdot
+				% 	\Big(
+				% 	\accentset{\scriptstyle 4}{\mathbb{C}}^{f_{\text{alocation}}(\lambda,\mu,\Bd^{R}_{G_i, i=1,\dots,N},\Bd^{E};\Bx)}
+				% 	:\nabla\Bu^{(s)}
+				% 	\Big)
+				% 	+ \rho\Bb
+				% 	= -\rho\nabla V_{e},
+				% \end{align*}
+				% where $V_{e}: \mathbb{R}^{3}\to\mathbb{R}$
+				% is the electric potential applied globally on ASSB.
+				% Due to nature setting of ASSB taking the form 
+				% (SE|SSE|SE)
+				% the electric potential becomes uniform.\\
+				\vspace{-0.6cm}
 			\end{mdframed}
+			\begin{minipage}{0.5\textwidth}
+				\begin{mdframed}
+					\textbf{Strain energy} is based on the 
+					deformation of SSE
+					due to dendrite formation 
+					at (SE|SSE)-interface 
+					% \begin{align*}
+					% 	\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega}
+					% 	f(a,\bm{u};\lambda,\mu,\bm{d}\otimes\bm{d}) \, d\Omega 
+					% \end{align*}
+				\end{mdframed}
+			\end{minipage}
+			\hfill 
+			\begin{minipage}{0.49\textwidth}
+				\begin{mdframed}
+					\textbf{Surface energy}
+					is analysised based on
+					the open crevice 
+					cracking at (SE|SSE)-interface
+					affected by prescribed pressure
+					% \begin{align*} 
+					% 	\bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} f(a;\gamma) \, d\Gamma
+					% \end{align*}
+				\end{mdframed}
+			\end{minipage}
+			%
+			% \begin{mdframed}
+			% 	Therefore, the governing problem of dendritic nucleation at 
+			% 	(SE|SSE) takes the form
+			% 	\begin{align}
+			% 		 & 
+			% 		\cancel{\partial_{t}\bm{u}}
+			% 		+
+			% 		\nabla \cdot
+			% 		\Big(
+			% 		\accentset{\scriptstyle 4}{\mathbb{C}}^{f_{\text{alocation}}(\lambda,\mu,\Bd^{R}_{G_i, i=1,\dots,N},\Bd^{E};\Bx)}
+			% 		:\nabla\Bu^{(s)}
+			% 		\Big)
+			% 		+ \rho\Bb
+			% 		= -\rho\nabla V_{e}, \\
+			% 		%--------------------------------
+			% 		\text{s.t.}\ \
+			% 		 & 
+			% 		a_{\text{Griffith}} := a^{*}
+			% 		= \arg\min_{a\in\mathbb{R}}
+			% 		{
+			% 			\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega}
+			% 			\!\!
+			% 			f(a,\bm{u},\theta;\lambda,\mu,\bm{d}^{(\star)}\otimes\bm{d}^{(\star)}) \, d\Omega
+			% 			- 
+			% 			\!\!\!\!
+			% 			\bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma}
+			% 			\!\!
+			% 			f(a;\gamma) \, d\Gamma
+			% 		}
+			% 		\Big|_{\bar{\bm{u}}}
+			% 	\end{align}
+			% 	where deformation $\bar{\Bu}$ is (i) based on (1), 
+			% 	and then (ii) for \emph{Griffith}-analysis in (2).
+			% \end{mdframed}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.38\textwidth}
 			\begin{mdframed}
-				Numerical spectral of \emph{Griffith} criterion at (SE|SSE) yields (xx-yy-xy)
-				% The set of boundary conditions is likewise the path of the pressure-centric dendritic crack.\\
 				\begin{center}
+					text
 					% \inputfig{floats/routine_woTV_numa_3x5}{routine_woTV_numa_3x5}
 					\inputfig{floats/contour_figs_Griffith_xx_Ta_pressure_crevice_298K}{contour_figs_Griffith_xx_Ta_pressure_crevice_298K}
+					text
 				\end{center}
-				% \underline{Comparison}: Analytical vs. Numerical solutions
-				% \begin{center}
-				% 	\inputfig{floats/comparison_ana_numa}{comparison_ana_numa}
-				% \end{center}
-				\vspace{-0.5cm}
-				where a sample of $5$ cases with various prescribed crevice length is studied.
 			\end{mdframed}
+			% \begin{mdframed}
+			% 	Analysis: \textit{Airy-Westergaard} fcn. used for stress analysis:
+			% 	(i) max. shear stress and (ii) principal stresses
+			% 	\vspace{-0.2cm}
+			% 	\begin{align*}
+			% 		\WA:
+			% 		\begin{cases}
+			% 			\mbC\to\mbC, \\
+			% 			\displaystyle
+			% 			z \mapsto \WAz:=
+			% 			\Re(\bigoiintsssss_{\Gamma} \mcK^{(\star)}\,dz )
+			% 			+ x_2\,
+			% 			\Im(\bigointssss_{\Gamma} \mcK^{(\star)}\,dz ),
+			% 		\end{cases}
+			% 		\mcK^{(\star)}:
+			% 		\begin{cases}
+			% 			\mbC \to \mbC, \\
+			% 			z \mapsto 
+			% 			\mcK^{(\star)}:=
+			% 			- p_{h} + p_{h}/\sqrt{1 - a^2/z^2},\
+			% 		\end{cases}
+			% 	\end{align*}
+			% 	\vspace{-0.3cm}
+			% 	where $a$ the crevice length, 
+			% 	$p_{h}$ pressure at the opening crevice on dendritic interface, 
+			% 	and $\forall \, \{p_{h},a\}\in\mbR_{+}$.
+			% \end{mdframed}
+			% \begin{minipage}{0.65\textwidth}
+			% \begin{mdframed}
+			% 	Boundary conditions applied on a solid-state object
+			% 	\begin{center}
+			% 		\inputfig{floats/structuraltwofields}{structuraltwofields}
+			% 	\end{center}
+			% \end{mdframed}
+			% \begin{mdframed}
+			% Numerical spectral of \emph{Griffith} criterion at (SE|SSE) yields (xx-yy-xy)
+			% The set of boundary conditions is likewise the path of the pressure-centric dendritic crack.\\
+			% \begin{center}
+			% 	% \inputfig{floats/routine_woTV_numa_3x5}{routine_woTV_numa_3x5}
+			% 	\inputfig{floats/contour_figs_Griffith_xx_Ta_pressure_crevice_298K}{contour_figs_Griffith_xx_Ta_pressure_crevice_298K}
+			% \end{center}
+			% \underline{Comparison}: Analytical vs. Numerical solutions
+			% \begin{center}
+			% 	\inputfig{floats/comparison_ana_numa}{comparison_ana_numa}
+			% \end{center}
+			% \vspace{-0.5cm}
+			% where a sample of $5$ cases with various prescribed crevice length is studied.
+			% \end{mdframed}
+			% \end{minipage}
+			% \hfill 
+			% \begin{minipage}{0.25\textwidth}
+			% \begin{mdframed}
+			% \begin{center}
+			% 	\inputfig{floats/characsin_rotate_semicircle_135246mix_vertical}{characsin_rotate_semicircle_135246mix_vertical}
+			% \end{center}
+			% FEM: Strain energy density
+			% \vspace{0.3cm}
+			% \inputfig{floats/griffith_flowchart_circle_formula}{griffith_flowchart_circle_formula}
+			% {\small Strain solution takes the following form}\\
+			% % $\tiny \sigma_{ij} = \mathbb{C}_{ijkl}^{f^{GL}}(y)\ \textcolor[rgb]{1,0,0}{\varepsilon_{kl}}$\\
+			% \small{
+			% $  \textcolor[rgb]{0,0.4,0}
+			% 	{
+			% 	\frac{1}{2}
+			% 	\!
+			% 	\sum_{\alpha=1}^{\mathcal{N}_{\text{node}}^{\Omega^{e}}} 
+			% 	\!
+			% 	( 
+			% 	\sum_{L=1}^{\mathcal{N}_{\text{dof}}^{\Omega^{\text{node}}}} 
+			% 	\!\!\!\!\!\!\! N^{\alpha}_{,\xi_{L}}\! \xi_{L,x_{k}} \textcolor[rgb]{0,0,1}{u}_{k}^{\alpha}
+			% 	\!\!+\!\! 
+			% 	\sum_{K=1}^{\mathcal{N}_{\text{dof}}^{\Omega^{\text{node}}}} 
+			% 	\!\!\!\!\!\!\! N^{\alpha}_{,\xi_{K}}\! \xi_{K,x_{l}} \textcolor[rgb]{0,0,1}{u}_{l}^{\alpha}
+			% 	)
+			% 	}
+			% $
+			% \vspace{0.1cm}
+			% }
+			% where displacement field $\Bu$ is known, 
+			% numerically computed from the PDE above.
+			% \end{mdframed}
+			% \begin{mdframed}
+			% 	\textit{Griffith}-based critical stress
+			% 	\begin{align*}
+			% 		\sigma_{\text{Griffith}} = \sqrt{\frac{2\, \gamma \, E}{\pi \, a_{\text{crevice}}}}
+			% 	\end{align*}
+			% 	governs nucleation interface.
+			% \end{mdframed}
+			% \end{minipage}
+			%
+			% \begin{mdframed}
+			% 	\underline{Numerics $\rightarrow$ FEM}:
+			% 	element matrix $\BK^{e}$
+			% 	approx. by \textit{Gauss quadrature}; 
+			% 	indices imply \textit{$4+2=6$ \textit{for}-loop}:
+			% 	\begin{align*}
+			% 		K^{\stackrel{\alpha\beta}{e\ \ }}_{ik} = 
+			% 		\int_{\Omega^{\xi}}
+			% 		\left(
+			% 		\mathcal{L}^{\alpha}_{1} \ \mathbb{C}_{i1k1}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{1} +
+			% 		\mathcal{L}^{\alpha}_{1} \ \mathbb{C}_{i1k2}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{2} +
+			% 		\mathcal{L}^{\alpha}_{2} \ \mathbb{C}_{i2k1}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{1} +
+			% 		\mathcal{L}^{\alpha}_{2} \ \mathbb{C}_{i2k2}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{2}
+			% 		\right)
+			% 		\det(\BJ) \ d\Omega^{\xi}
+			% 	\end{align*}
+			% 	where $\mathcal{L}^{\alpha}_{j}$ and $\mathcal{R}^{\beta}_{l}$ are gradients of basis functions at node $\alpha^{th}$ and $\beta^{th}$, respectively.
+			% \end{mdframed}
 		\end{minipage}
-		\hfill 
-		\begin{minipage}{0.3\textwidth}
-			\begin{mdframed}
-				FEM: Strain energy density
-				\vspace{0.3cm}
-				\inputfig{floats/griffith_flowchart_circle_formula}{griffith_flowchart_circle_formula}
-				{\small Strain solution takes the following form}\\
-				% $\tiny \sigma_{ij} = \mathbb{C}_{ijkl}^{f^{GL}}(y)\ \textcolor[rgb]{1,0,0}{\varepsilon_{kl}}$\\
-				\small{
-				$  \textcolor[rgb]{0,0.4,0}
-					{
-					\frac{1}{2}
-					\!
-					\sum_{\alpha=1}^{\mathcal{N}_{\text{node}}^{\Omega^{e}}} 
-					\!
-					( 
-					\sum_{L=1}^{\mathcal{N}_{\text{dof}}^{\Omega^{\text{node}}}} 
-					\!\!\!\!\!\!\! N^{\alpha}_{,\xi_{L}}\! \xi_{L,x_{k}} \textcolor[rgb]{0,0,1}{u}_{k}^{\alpha}
-					\!\!+\!\! 
-					\sum_{K=1}^{\mathcal{N}_{\text{dof}}^{\Omega^{\text{node}}}} 
-					\!\!\!\!\!\!\! N^{\alpha}_{,\xi_{K}}\! \xi_{K,x_{l}} \textcolor[rgb]{0,0,1}{u}_{l}^{\alpha}
-					)
-					}
-				$
-				\vspace{0.1cm}
-				}
-				where displacement field $\Bu$ is known, 
-				numerically computed from the PDE above.
-			\end{mdframed}
-			\begin{mdframed}
-				\textit{Griffith}-based critical stress
-				\begin{align*}
-					\sigma_{\text{Griffith}} = \sqrt{\frac{2\, \gamma \, E}{\pi \, a_{\text{crevice}}}}
-				\end{align*}
-				governs nucleation interface.
-			\end{mdframed}
-		\end{minipage}
-		%
-		% \begin{mdframed}
-		% 	\underline{Numerics $\rightarrow$ FEM}:
-		% 	element matrix $\BK^{e}$
-		% 	approx. by \textit{Gauss quadrature}; 
-		% 	indices imply \textit{$4+2=6$ \textit{for}-loop}:
-		% 	\begin{align*}
-		% 		K^{\stackrel{\alpha\beta}{e\ \ }}_{ik} = 
-		% 		\int_{\Omega^{\xi}}
-		% 		\left(
-		% 		\mathcal{L}^{\alpha}_{1} \ \mathbb{C}_{i1k1}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{1} +
-		% 		\mathcal{L}^{\alpha}_{1} \ \mathbb{C}_{i1k2}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{2} +
-		% 		\mathcal{L}^{\alpha}_{2} \ \mathbb{C}_{i2k1}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{1} +
-		% 		\mathcal{L}^{\alpha}_{2} \ \mathbb{C}_{i2k2}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{2}
-		% 		\right)
-		% 		\det(\BJ) \ d\Omega^{\xi}
-		% 	\end{align*}
-		% 	where $\mathcal{L}^{\alpha}_{j}$ and $\mathcal{R}^{\beta}_{l}$ are gradients of basis functions at node $\alpha^{th}$ and $\beta^{th}$, respectively.
-		% \end{mdframed}
-	\end{minipage}
-	\vspace{-0.4cm}
-}
-% ----------------------------------------------------------------------------------------------------------------
+		% \hfill
+		% \begin{minipage}{0.14\textwidth}
+		% 	\begin{mdframed}
+		% 		\begin{center}
+		% 			test
+		% 			\inputfig{floats/characsin_rotate_semicircle_135246mix_vertical}{characsin_rotate_semicircle_135246mix_vertical}
+		% 		\end{center}
+		% 	\end{mdframed}
+		% \end{minipage}
+		% \vspace{-0.4cm}
+		\begin{mdframed}
+			\begin{center}
+				text
+				\vspace{2mm}
+				\inputfig{floats/characsin_rotate_semicircle_135246mix_horizontal}{characsin_rotate_semicircle_135246mix_horizontal}
+				\vspace{2mm}
+				text
+			\end{center}
+		\end{mdframed}
+	}
+\end{columns}
+
+%----------------------------------------------------------------------------------------------------------------
 \begin{columns}
 	\column{0.14}
 	% ---------------------------------------------------------------------------------------------------------------- %	
@@ -561,19 +643,47 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\inputfig{floats/QRcode_ACoM_Email}{QRcode_ACoM_Email}
 		\end{center}
 	}
-	\column{0.86}
+	\column{0.66}
 	%---------------------------------------------------------------------------------------------------------------- %	
 	\block{References}{
 		\vspace*{-3em}
 		\renewcommand{\refname}{~}
-		\vspace{-0.4cm}
+		\vspace{-0.2cm}
 		\begin{thebibliography}{2}
+			\small
+			
+			\bibitem{vo2023}
+			\textbf{T.Vo}, C.Hüter, S.Braun,
+			\emph{Math. modelling for All-solid-state batt.: (SE$|$SSE)-Interface}.
+			Poster, Oxford Batt. Modelling Symp., Univ. of Oxford, OBMS23, Page 66, \textbf{2023}.
+			
+			\bibitem{vo2023}
+			\textbf{T.Vo}, C.Hüter, S.Braun, M.Torrilhon,
+			\emph{Mathematical modelling for All-solid-state batt.: (SE$|$SSE)-Interface}.
+			Poster, SIAM Comp. Sci. and Eng. Conference, Amsterdam, \textbf{2023}.
+			
+			\bibitem{vo2022}
+			\textbf{T.Vo}, 
+			\emph{Mathematical modelling for All-solid-state batt.: Griffith criterion}.
+			Presentation, NUMAP-FOAM Summer School, Univ. of Cambridge, \textbf{2022}.
+			
+			\bibitem{vo2020}
+			\textbf{T.Vo}, C.Hüter, S.Braun, R.Spatschek, 
+			\emph{Mathematical modelling for All-solid-state batt.: Griffith criterion}.
+			Doctoral presentation, Forschungszentrum Jülich, \textbf{2020}.
+			
 			\bibitem{vo2018}
 			\textbf{T.Vo},
 			\!\!
-			\emph{Modeling\! the\! swelling\! phenomena\! of\! li-ion\! batt.\!
-				cells\! based\! on\! a\! numerical\! chemo-mech.\! coupled\! approach}.
-			MA, Robert Bosch Battery Systems GmbH, \textbf{2018}.
+			\emph{Modeling the swelling phenomena of li-ion batt.
+				cells based on a numerical chemo-mech. coupled approach}.
+			Master thesis, Robert Bosch Battery Systems GmbH, \textbf{2018}.
+			
+			\bibitem{vo2014}
+			\textbf{T.Vo},
+			\!\!
+			\emph{Simulation environment for NTC-based voltage drop reduction in Start/Stop applications and its optimization}.
+			Bachelor thesis, Robert Bosch GmbH, \textbf{2014}.
 			
 			\bibitem{braun2015}
 			\textbf{S.Braun},\! C.Yada,\! and\! A.Latz,
@@ -581,6 +691,11 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\emph{Thermodynamically\! consistent\! model\! for\!
 				Space-Charge-Layer\! formation\! in\! a\! solid\! electrolyte}.
 			Jr.\! Phys.\! Chem.,\! 119,\! 22281-22288,\! \textbf{2015}.
+			
+			\bibitem{hueter2020}
+			\textbf{C.Hüter}, X.Yin, T.Vo, S.Braun,
+			\emph{A pragmatic dataset augmentation approach for transformation temp. prediction in steels}. 
+			Comp. Mat. Science, Vol. 176, 109488, \textbf{2020}.
 			
 			\bibitem{hueter2017}
 			\textbf{C.Hüter}, S.Fu, M.Finsterbusch, E.Figgemeier, L.Wells, and R.Spatschek,
@@ -593,17 +708,19 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\emph{Modeling nonequilibrium gas flow based on moment equations}.
 			Annual Review of Fluid Mechanics, 48(1):429-458, \textbf{2016}.
 			
-			\bibitem{kim2022}
-			\textbf{S.Kim}, 
-			J.S.Kim, L.Miara, Y.Wang, S.K.Jung, S.Y.Park, Z.Song, 
-			H.King, M.Badding, J.M.Chang, V.Roev, G.Yoon, R.Kim, J.H.Kim, K.Yoon, D.Im, and K.Kang,
-			\emph{High-energy and durable li metal batt. using garnet-type
-				solid electrolytes with tailored li-metal compatibility}.
-			Nature Communications, 13(1):1883, \textbf{2022}.
+			% \bibitem{kim2022}
+			% \textbf{S.Kim}, 
+			% J.S.Kim, L.Miara, Y.Wang, S.K.Jung, S.Y.Park, Z.Song, 
+			% H.King, M.Badding, J.M.Chang, V.Roev, G.Yoon, R.Kim, J.H.Kim, K.Yoon, D.Im, and K.Kang,
+			% \emph{High-energy and durable li metal batt. using garnet-type
+			% 	solid electrolytes with tailored li-metal compatibility}.
+			% Nature Communications, 13(1):1883, \textbf{2022}.
 			% $(*)$ (Solid electrode | Solid-state electrolyte)
 		\end{thebibliography}
 		\vspace{-0.8cm}
 	}
+	
+	\column{0.14}
 \end{columns}
 % ----------------------------------------------------------------------------------------------------------------
 \block{}
@@ -656,19 +773,19 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 	% \vspace{-0.05em}
 	\begin{minipage}{0.1\textwidth}
 		\begin{flushright}
-			\includegraphics[width=0.35\textwidth]{./floats/logos/oxford_blue_square.eps}
+			\includegraphics[width=1.1\textwidth]{./floats/logos/bosch_spring_school_2024Mar.eps}
 		\end{flushright}
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.3\textwidth}
 		\begin{flushleft}
-			\includegraphics[width=0.65\textwidth]{./floats/logos/obms23.eps}
+			\includegraphics[width=0.75\textwidth]{./floats/logos/bss24.eps}
 		\end{flushleft}
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.05\textwidth}
 		% \begin{center}
-		\psfrag{obms}[c][c] {$\textbf{\#OBMS2023}\hphantom{aaaaaaaaaa}$}
+		\psfrag{obms}[c][c] {$\hphantom{aaaaaaaaaa}\textbf{\#OBMS2023}\hphantom{aaaaaaaaaa}$}
 		\includegraphics[width=0.85\textwidth]{./floats/logos/obms23_hashtag.eps}
 		% \end{center}
 	\end{minipage}
