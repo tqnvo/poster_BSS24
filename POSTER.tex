@@ -221,8 +221,8 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				\mathbb{C}(\lambda,\mu)
 				:\nabla\Bu^{(s)}_{\textsc{scl}}
 				\Big)
-				+ \rho_{\textsc{scl}}\,\Bb
-				= -\rho_{\textsc{scl}}\,\nabla V_{e}, \\
+				+ \rho_{\textsc{scl}}\, \Bb
+				= -\rho_{\textsc{scl}}\, V_{e}, \\
 				%--------------------------------
 				\text{s.t.}\ \
 				 & 
@@ -236,7 +236,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				\!\!\!\!
 				\bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma}
 				\!\!
-				f(a_{\text{crevice}};\gamma) \, d\Gamma
+				f(a_{\text{crevice}};\gamma_{s}) \, d\Gamma
 				}
 				\},
 			\end{align}
@@ -253,7 +253,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			$\lambda, \mu$ Lam\'{e} constants,
 			$\Bd\otimes\Bd$ embedded misorientation SCL structural tensor,
 			and
-			$\gamma$ cracking-surface energy density,
+			$\gamma_{s}$ cracking-surface energy density,
 			% \colorbox{pink}{can help}
 			can help
 			to improve ASSB performance
@@ -482,49 +482,42 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 		%
 		\begin{minipage}{0.1\textwidth}
 			\begin{mdframed}
-				Griffith criterion:
+				% By analysing the system of equations in $(1)$ and $(2)$
+				% a simplified Griffith nucleation criterion is obtained. 
+				% This results in an expression
+				% with Cauchy stress $\sigma$,
+				% Young's modulus $E_{Y}$, and 
+				% surface energy $\gamma_{s}$.
+				% While $\gamma_{s}$ is taken from experiments,
+				% $\sigma$ is computed based on the OpenFOAM library.
+				\textbf{Solution:}
+				Analysing equations $(1)$ and $(2)$ yields
+				a simplified Griffith nucleation criterion,
+				incorporating Cauchy stress $\sigma$,
+				Young's modulus $E_{Y}$, and
+				experimentally-derived surface energy $\gamma_{s}$,
+				with $\sigma$ calculated using the OpenFOAM library.
+			\end{mdframed}
+			%
+			\begin{mdframed}
+				\textbf{Griffith criterion}:
 				\begin{align*}
 					a_{\text{Griffith}}^{\text{simplified}} = 
 					\sqrt{\frac{2\,E_{Y}\,\gamma_{s}}{\pi\,\sigma}}
 				\end{align*}
 			\end{mdframed}
-			%
-			\begin{mdframed}
-				\scalebox{0.7}{
-					% Griffith nucleation criterion is computed based on
-					% the relation
-					% \begin{align*}
-					% 	a_{\text{Griffith}}^{\text{simplified}}
-					% 	= \sqrt{\frac{2\,E_{Y}\,\gamma_{s}}{\pi\,\sigma}},
-					% \end{align*}
-					% where the Cauchy stress $\sigma$
-					% is computed based on OpenFOAM library.
-					% Here, 
-					% $E_{Y}$ is Young's modulus
-					% and $\gamma_{s}$ surface energy.
-					By analysing the system of equations in $(1)$ and $(2)$
-					a simplified Griffith nucleation criterion is obtained. 
-					This results in an expression
-					% \begin{align*}
-					% 	a_{\text{Griffith}}^{\text{simplified}} = 
-					% 	\sqrt{\frac{2\,E_{Y}\,\gamma_{s}}{\pi\,\sigma}}
-					% \end{align*}
-					with Cauchy stress $\sigma$
-					determined by the 
-					OpenFOAM library. 
-					In this formula, 
-					$E_{Y}$ represents Young's modulus, and 
-					$\gamma_{s}$ denotes surface energy.
-				}
-			\end{mdframed}
 		\end{minipage}
 		%
 		\begin{mdframed}
-			\textbf{Shock}: Li-ion transport leads to shocking phenomena at the discontinuous (SE$|$SSE)-Interface, influenced by the distribution and size of grains.
+			\textbf{Shock}: 
+			Li-ion transport leads to shocking phenomena 
+			at the discontinuous (SE$|$SSE)-Interface, 
+			influenced by the distribution and size of grains.
 			\begin{center}				
 				\inputfig{floats/characsin_rotate_semicircle_135246mix_horizontal}{characsin_rotate_semicircle_135246mix_horizontal}
 			\end{center}
 		\end{mdframed}
+		\vspace{-5mm}
 	}
 \end{columns}
 
