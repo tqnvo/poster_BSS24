@@ -122,7 +122,7 @@ subcolspace=0mm]{tikzposter}
 % }
 % \title{\scshape Next-generation all-solid-state battery (\#ASSB @ \#OBMS23)}
 % \title{\scshape Mathematical modelling for all-solid-state battery:\!\! (se|sse)-Interface}
-\title{\scshape Mathematical modelling for All-solid-state battery}
+\title{\scshape Mathematical\,modelling\,for\,all-solid-state\,battery:\,space-charge\,layer}
 \author{
 	\underline{Tuan Vo}$^{\text{a,b}\,\dagger}$, Claas Hüter$^{\text{b}}$, Stefanie Braun$^{\text{a}}$, Manuel Torrilhon$^{\text{a}}$\\
 \normalsize vo@acom.rwth-aachen.de}
@@ -464,7 +464,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 					of crevices at the (SE|SSE)-Interface
 					under specific pressure conditions:
 					\begin{align*}
-						E_{\text{sf}} \! := \!\!\!
+						E_{\text{sf}} := \!\!\!
 						\bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} f(a;\gamma) \, d\Gamma
 					\end{align*}
 				\end{mdframed}
@@ -480,29 +480,31 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\end{mdframed}
 		\end{minipage}
 		%
-		\begin{minipage}{0.105\textwidth}
+		\begin{minipage}{0.107\textwidth}
 			\begin{mdframed}
 				\textbf{Solution:}
-				Analysing system of PDEs in $(1)$ and $(2)$ results in
+				Analysing system of PDEs arising in $(1)$ and $(2)$
+				% eventually 
+				results in
 				a simplified Griffith nucleation criterion,
-				which incorporates Cauchy stress tensor denoted by $\sigma$,
+				including
+				the Cauchy stress tensor denoted by $\sigma$,
 				Young's elastic modulus $E_{Y}$, and
 				experimentally-derived surface energy $\gamma_{s}$.
-				Here, $\sigma$ is calculated using FVM 
+				Here, the $\sigma$ is computed 
+				using FVM 
 				based on OpenFOAM library 
 				\cite{vo2023_obms23}\cite{vo2023_cse23}\cite{vo2022}\cite{vo2020}.
-				\vspace{-3mm}
 			\end{mdframed}
 			%
-			\vspace{-3mm}
+			\vspace{-2mm}
 			\begin{mdframed}
 				Griffith criterion:
 				\begin{align*}
-					a_{\text{Griffith}}^{\text{simplified}} \!=\! 
-					\sqrt{\frac{2\,E_{Y}\,\gamma_{s}}{\pi\,\sigma}}
+					\sigma_{\text{Griffith}}^{\text{simplified}} \!=\! 
+					\sqrt{\frac{2\,E_{Y}\,\gamma_{s}}{\pi\,a_{\text{crevice}}}}
 				\end{align*}
 			\end{mdframed}
-			\vspace{-3mm}
 		\end{minipage}
 		%
 		\begin{mdframed}
@@ -657,6 +659,10 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 \block{}
 {
 	\vspace{-1mm}
+	\begin{minipage}{0.05\textwidth}
+		\hphantom{nothing}
+	\end{minipage}
+	\hfill
 	\begin{minipage}{0.1\textwidth}
 		\begin{flushright}
 			\includegraphics[width=1.1\textwidth]{./floats/logos/bosch_spring_school_2024Mar.eps}
