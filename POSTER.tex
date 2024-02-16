@@ -399,7 +399,9 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 	{
 		\begin{minipage}{0.35\textwidth}
 			\begin{mdframed}
-				\inputfig{floats/structuralfivefields_multi_edited}{structuralfivefields_multi_edited}
+				\begin{center}
+					\inputfig{floats/structuralfivefields_multi_edited}{structuralfivefields_multi_edited}
+				\end{center}
 			\end{mdframed}
 			%
 			\begin{mdframed}
@@ -470,15 +472,16 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				% Due to nature setting of ASSB taking the form 
 				% (SE|SSE|SE)
 				% the electric potential becomes uniform.\\
-				\vspace{-0.6cm}
+				\vspace{-6mm}
 			\end{mdframed}
 			\begin{minipage}{0.5\textwidth}
 				\begin{mdframed}
-					\textbf{Strain energy} is based on the 
-					deformation of SSE
-					due to dendrite formation 
-					at (SE|SSE)-interface 
+					\textbf{Strain energy} ($E_{\text{st}}$) is derived from the 
+					SSE deformation due to
+					dendrite formation 
+					at the unstable (SE|SSE)-Interface:
 					\begin{align*}
+						E_{\text{st}} \! := \!\!\!
 						\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega}
 						f(a,\bm{u};\lambda,\mu,\bm{d}\otimes\bm{d}) \, d\Omega 
 					\end{align*}
@@ -487,12 +490,12 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\hfill 
 			\begin{minipage}{0.49\textwidth}
 				\begin{mdframed}
-					\textbf{Surface energy}
-					is analysised based on
-					the open crevice 
-					cracking at (SE|SSE)-interface
-					affected by prescribed pressure
-					\begin{align*} 
+					\textbf{Surface energy} ($E_{\text{sf}}$)
+					is assessed through the analysis
+					of crevices at the (SE|SSE)-Interface
+					under specific pressure conditions:
+					\begin{align*}
+						E_{\text{sf}} \! := \!\!\!
 						\bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} f(a;\gamma) \, d\Gamma
 					\end{align*}
 				\end{mdframed}
