@@ -400,7 +400,6 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 	
 	\column{0.76}
 	\block{State-of-the-art: Nucleation interface taking place at the unstable (SE|SSE)-Discontinuity}
-	% \block{Nucleation interface}
 	{
 		\begin{minipage}{0.35\textwidth}
 			\begin{mdframed}
@@ -411,10 +410,8 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\end{mdframed}
 			%
 			\begin{mdframed}
-				% \inputfig{floats/characsin_rotate_semicircle_135246mix_vertical}{characsin_rotate_semicircle_135246mix_vertical}
 				\textbf{Coupled fields} are  
 				Displacement field $\Bu$ and Temperature field $\theta$:
-				% structural tensor $\BM$
 				\begin{align*}
 					\Bu:
 					\begin{cases}
@@ -428,23 +425,8 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 						(\Bx,t) \mapsto \theta(\Bx,t).
 					\end{cases}
 					%
-					% \BM^{\{RR,RE\}}_{i=1,\dots,N}:
-					% \begin{cases}
-					% 	% \left( 
-					% 	\Bd^{R}_{\text{\tiny Grain i}} \otimes \Bd^{R}_{\text{\tiny Grain i}} 
-					% 	% \right)
-					% 	% \!\!\big|_{\tiny{i=1,\dots,N}}
-					% 	\\
-					% 	\Bd^{R}_{\text{\tiny Grain i}} \otimes \Bd^{E}
-					% \end{cases}
 				\end{align*}
 				Governing conservation equations
-				% \begin{align*}
-				% 	\frac{d}{dt} \int_{\Omega}(\cdot)\ d\Omega 
-				% 	= \int_{\Omega}(\cdot)^{\text{\tiny action}}\ d\Omega 
-				% 	+ \int_{\partial\Omega}(\cdot)^{\text{\tiny action}}\ d\partial\Omega  
-				% 	+ \int_{\Omega}(\cdot)^{\text{\tiny production (+/-)}}\ d\Omega
-				% \end{align*}
 				account for mass balance, 
 				linear and angular momentum,
 				and energy conservation.
@@ -458,28 +440,9 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				Cauchy stress $\Bsigma$, and
 				infinitesimal strain $\Bvarepsilon$
 				per unit volume.
-				% Then, the governing partial differential equation (PDE) 
-				% for the thermodynamically consistent coupled problem
-				% with deformation field $\Bu$ as its variable
-				% takes the form
-				% \begin{align*}
-				% 	\partial_{t}\bm{u}
-				% 	+
-				% 	\nabla \cdot
-				% 	\Big(
-				% 	\accentset{\scriptstyle 4}{\mathbb{C}}^{f_{\text{alocation}}(\lambda,\mu,\Bd^{R}_{G_i, i=1,\dots,N},\Bd^{E};\Bx)}
-				% 	:\nabla\Bu^{(s)}
-				% 	\Big)
-				% 	+ \rho\Bb
-				% 	= -\rho\nabla V_{e},
-				% \end{align*}
-				% where $V_{e}: \mathbb{R}^{3}\to\mathbb{R}$
-				% is the electric potential applied globally on ASSB.
-				% Due to nature setting of ASSB taking the form 
-				% (SE|SSE|SE)
-				% the electric potential becomes uniform.\\
 				\vspace{-12mm}
 			\end{mdframed}
+			%
 			\begin{minipage}{0.5\textwidth}
 				\begin{mdframed}
 					\textbf{Strain energy} ($E_{\text{st}}$) is derived from the 
@@ -506,171 +469,28 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 					\end{align*}
 				\end{mdframed}
 			\end{minipage}
-			%
-			% \begin{mdframed}
-			% 	Therefore, the governing problem of dendritic nucleation at 
-			% 	(SE|SSE) takes the form
-			% 	\begin{align}
-			% 		 & 
-			% 		\cancel{\partial_{t}\bm{u}}
-			% 		+
-			% 		\nabla \cdot
-			% 		\Big(
-			% 		\accentset{\scriptstyle 4}{\mathbb{C}}^{f_{\text{alocation}}(\lambda,\mu,\Bd^{R}_{G_i, i=1,\dots,N},\Bd^{E};\Bx)}
-			% 		:\nabla\Bu^{(s)}
-			% 		\Big)
-			% 		+ \rho\Bb
-			% 		= -\rho\nabla V_{e}, \\
-			% 		%--------------------------------
-			% 		\text{s.t.}\ \
-			% 		 & 
-			% 		a_{\text{Griffith}} := a^{*}
-			% 		= \arg\min_{a\in\mathbb{R}}
-			% 		{
-			% 			\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega}
-			% 			\!\!
-			% 			f(a,\bm{u},\theta;\lambda,\mu,\bm{d}^{(\star)}\otimes\bm{d}^{(\star)}) \, d\Omega
-			% 			- 
-			% 			\!\!\!\!
-			% 			\bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma}
-			% 			\!\!
-			% 			f(a;\gamma) \, d\Gamma
-			% 		}
-			% 		\Big|_{\bar{\bm{u}}}
-			% 	\end{align}
-			% 	where deformation $\bar{\Bu}$ is (i) based on (1), 
-			% 	and then (ii) for \emph{Griffith}-analysis in (2).
-			% \end{mdframed}
 		\end{minipage}
 		\hfill
-		\begin{minipage}{0.38\textwidth}
+		\begin{minipage}{0.39\textwidth}
 			\begin{mdframed}
 				\begin{center}
-					Griffith nucleation criterion is computed based 
-					% \inputfig{floats/routine_woTV_numa_3x5}{routine_woTV_numa_3x5}
-					\inputfig{floats/contour_figs_Griffith_xx_Ta_pressure_crevice_298K}{contour_figs_Griffith_xx_Ta_pressure_crevice_298K}
-					text
+					\inputfig{floats/contour_figs_Griffith_xx_Ta_pressure_crevice_298K_noframed}{contour_figs_Griffith_xx_Ta_pressure_crevice_298K_noframed}
 				\end{center}
 			\end{mdframed}
-			% \begin{mdframed}
-			% 	Analysis: \textit{Airy-Westergaard} fcn. used for stress analysis:
-			% 	(i) max. shear stress and (ii) principal stresses
-			% 	\vspace{-0.2cm}
-			% 	\begin{align*}
-			% 		\WA:
-			% 		\begin{cases}
-			% 			\mbC\to\mbC, \\
-			% 			\displaystyle
-			% 			z \mapsto \WAz:=
-			% 			\Re(\bigoiintsssss_{\Gamma} \mcK^{(\star)}\,dz )
-			% 			+ x_2\,
-			% 			\Im(\bigointssss_{\Gamma} \mcK^{(\star)}\,dz ),
-			% 		\end{cases}
-			% 		\mcK^{(\star)}:
-			% 		\begin{cases}
-			% 			\mbC \to \mbC, \\
-			% 			z \mapsto 
-			% 			\mcK^{(\star)}:=
-			% 			- p_{h} + p_{h}/\sqrt{1 - a^2/z^2},\
-			% 		\end{cases}
-			% 	\end{align*}
-			% 	\vspace{-0.3cm}
-			% 	where $a$ the crevice length, 
-			% 	$p_{h}$ pressure at the opening crevice on dendritic interface, 
-			% 	and $\forall \, \{p_{h},a\}\in\mbR_{+}$.
-			% \end{mdframed}
-			% \begin{minipage}{0.65\textwidth}
-			% \begin{mdframed}
-			% 	Boundary conditions applied on a solid-state object
-			% 	\begin{center}
-			% 		\inputfig{floats/structuraltwofields}{structuraltwofields}
-			% 	\end{center}
-			% \end{mdframed}
-			% \begin{mdframed}
-			% Numerical spectral of \emph{Griffith} criterion at (SE|SSE) yields (xx-yy-xy)
-			% The set of boundary conditions is likewise the path of the pressure-centric dendritic crack.\\
-			% \begin{center}
-			% 	% \inputfig{floats/routine_woTV_numa_3x5}{routine_woTV_numa_3x5}
-			% 	\inputfig{floats/contour_figs_Griffith_xx_Ta_pressure_crevice_298K}{contour_figs_Griffith_xx_Ta_pressure_crevice_298K}
-			% \end{center}
-			% \underline{Comparison}: Analytical vs. Numerical solutions
-			% \begin{center}
-			% 	\inputfig{floats/comparison_ana_numa}{comparison_ana_numa}
-			% \end{center}
-			% \vspace{-0.5cm}
-			% where a sample of $5$ cases with various prescribed crevice length is studied.
-			% \end{mdframed}
-			% \end{minipage}
-			% \hfill 
-			% \begin{minipage}{0.25\textwidth}
-			% \begin{mdframed}
-			% \begin{center}
-			% 	\inputfig{floats/characsin_rotate_semicircle_135246mix_vertical}{characsin_rotate_semicircle_135246mix_vertical}
-			% \end{center}
-			% FEM: Strain energy density
-			% \vspace{0.3cm}
-			% \inputfig{floats/griffith_flowchart_circle_formula}{griffith_flowchart_circle_formula}
-			% {\small Strain solution takes the following form}\\
-			% % $\tiny \sigma_{ij} = \mathbb{C}_{ijkl}^{f^{GL}}(y)\ \textcolor[rgb]{1,0,0}{\varepsilon_{kl}}$\\
-			% \small{
-			% $  \textcolor[rgb]{0,0.4,0}
-			% 	{
-			% 	\frac{1}{2}
-			% 	\!
-			% 	\sum_{\alpha=1}^{\mathcal{N}_{\text{node}}^{\Omega^{e}}} 
-			% 	\!
-			% 	( 
-			% 	\sum_{L=1}^{\mathcal{N}_{\text{dof}}^{\Omega^{\text{node}}}} 
-			% 	\!\!\!\!\!\!\! N^{\alpha}_{,\xi_{L}}\! \xi_{L,x_{k}} \textcolor[rgb]{0,0,1}{u}_{k}^{\alpha}
-			% 	\!\!+\!\! 
-			% 	\sum_{K=1}^{\mathcal{N}_{\text{dof}}^{\Omega^{\text{node}}}} 
-			% 	\!\!\!\!\!\!\! N^{\alpha}_{,\xi_{K}}\! \xi_{K,x_{l}} \textcolor[rgb]{0,0,1}{u}_{l}^{\alpha}
-			% 	)
-			% 	}
-			% $
-			% \vspace{0.1cm}
-			% }
-			% where displacement field $\Bu$ is known, 
-			% numerically computed from the PDE above.
-			% \end{mdframed}
-			% \begin{mdframed}
-			% 	\textit{Griffith}-based critical stress
-			% 	\begin{align*}
-			% 		\sigma_{\text{Griffith}} = \sqrt{\frac{2\, \gamma \, E}{\pi \, a_{\text{crevice}}}}
-			% 	\end{align*}
-			% 	governs nucleation interface.
-			% \end{mdframed}
-			% \end{minipage}
-			%
-			% \begin{mdframed}
-			% 	\underline{Numerics $\rightarrow$ FEM}:
-			% 	element matrix $\BK^{e}$
-			% 	approx. by \textit{Gauss quadrature}; 
-			% 	indices imply \textit{$4+2=6$ \textit{for}-loop}:
-			% 	\begin{align*}
-			% 		K^{\stackrel{\alpha\beta}{e\ \ }}_{ik} = 
-			% 		\int_{\Omega^{\xi}}
-			% 		\left(
-			% 		\mathcal{L}^{\alpha}_{1} \ \mathbb{C}_{i1k1}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{1} +
-			% 		\mathcal{L}^{\alpha}_{1} \ \mathbb{C}_{i1k2}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{2} +
-			% 		\mathcal{L}^{\alpha}_{2} \ \mathbb{C}_{i2k1}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{1} +
-			% 		\mathcal{L}^{\alpha}_{2} \ \mathbb{C}_{i2k2}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{2}
-			% 		\right)
-			% 		\det(\BJ) \ d\Omega^{\xi}
-			% 	\end{align*}
-			% 	where $\mathcal{L}^{\alpha}_{j}$ and $\mathcal{R}^{\beta}_{l}$ are gradients of basis functions at node $\alpha^{th}$ and $\beta^{th}$, respectively.
-			% \end{mdframed}
 		\end{minipage}
-		% \hfill
-		% \begin{minipage}{0.14\textwidth}
-		% 	\begin{mdframed}
-		% 		\begin{center}
-		% 			test
-		% 			\inputfig{floats/characsin_rotate_semicircle_135246mix_vertical}{characsin_rotate_semicircle_135246mix_vertical}
-		% 		\end{center}
-		% 	\end{mdframed}
-		% \end{minipage}
-		% \vspace{-0.4cm}
+		\hfill
+		\begin{minipage}{0.10\textwidth}
+			\begin{mdframed}
+				Griffith nucleation criterion is computed based on
+				the relation
+				% \begin{align*}
+				% 	a_{\text{Griffith}}^{\text{simple}}
+				% 	= \sqrt{\frac{2\,E_{Y}\,\gamma_{s}}{\pi\,\sigma}},
+				% \end{align*}
+				where the Cauchy stress $\sigma$
+				is computed based on OpenFOAM library.
+			\end{mdframed}
+		\end{minipage}
 		\begin{mdframed}
 			\begin{center}
 				text
@@ -680,7 +500,6 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				text
 			\end{center}
 		\end{mdframed}
-		\vspace{-4mm}
 	}
 \end{columns}
 
