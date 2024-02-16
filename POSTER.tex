@@ -440,7 +440,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				Cauchy stress $\Bsigma$, and
 				infinitesimal strain $\Bvarepsilon$
 				per unit volume.
-				\vspace{-12mm}
+				\vspace{-10mm}
 			\end{mdframed}
 			%
 			\begin{minipage}{0.5\textwidth}
@@ -476,29 +476,33 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				\begin{center}
 					\inputfig{floats/contour_figs_Griffith_xx_Ta_pressure_crevice_298K_noframed}{contour_figs_Griffith_xx_Ta_pressure_crevice_298K_noframed}
 				\end{center}
-				\vspace{-4mm}
+				\vspace{-3mm}
 			\end{mdframed}
 		\end{minipage}
 		%
-		\begin{minipage}{0.1\textwidth}
+		\begin{minipage}{0.105\textwidth}
 			\begin{mdframed}
 				\textbf{Solution:}
-				Analysing system of equations $(1)$ and $(2)$ yields
+				Analysing system of PDEs in $(1)$ and $(2)$ results in
 				a simplified Griffith nucleation criterion,
-				incorporating Cauchy stress $\sigma$,
-				Young's modulus $E_{Y}$, and
-				experimentally-derived surface energy $\gamma_{s}$,
-				with $\sigma$ calculated using FVM 
-				based on the OpenFOAM library \cite{vo2022}\cite{vo2023_cse23}\cite{vo2023_obms23}.
+				which incorporates Cauchy stress tensor denoted by $\sigma$,
+				Young's elastic modulus $E_{Y}$, and
+				experimentally-derived surface energy $\gamma_{s}$.
+				Here, $\sigma$ is calculated using FVM 
+				based on OpenFOAM library 
+				\cite{vo2023_obms23}\cite{vo2023_cse23}\cite{vo2022}\cite{vo2020}.
+				\vspace{-3mm}
 			\end{mdframed}
 			%
+			\vspace{-3mm}
 			\begin{mdframed}
-				Griffith criterion: \cite{vo2020}
+				Griffith criterion:
 				\begin{align*}
 					a_{\text{Griffith}}^{\text{simplified}} \!=\! 
 					\sqrt{\frac{2\,E_{Y}\,\gamma_{s}}{\pi\,\sigma}}
 				\end{align*}
 			\end{mdframed}
+			\vspace{-3mm}
 		\end{minipage}
 		%
 		\begin{mdframed}
@@ -510,7 +514,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				\inputfig{floats/characsin_rotate_semicircle_135246mix_horizontal}{characsin_rotate_semicircle_135246mix_horizontal}
 			\end{center}
 		\end{mdframed}
-		\vspace{-3mm}
+		\vspace{-5mm}
 	}
 \end{columns}
 
@@ -619,60 +623,6 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 	\column{0.22}
 	\block{Acknowledgments}{
 		\small
-		% T.Vo thanks to
-		% the research funding project 
-		% at JARA-CSD
-		% from Dr. S.Braun and Dr. C.Hüter,
-		% and 
-		% teaching assistant placement in
-		% Mathematische Grundlagend 
-		% II, III, IV, NumPDE
-		% at CES and SiSc
-		% at RWTH Aachen University 
-		% along with 
-		% Prof.\,M.Torrilhon, 
-		% Prof.\,M.Schlott-Lakemper,
-		% Dr.\,R.Speck, 
-		% Prof.\,B.Berkels, 
-		% Dr.\,S.Braun,
-		% Prof.\,J.Kowalski,
-		% Dr.\,A.Jha,
-		% Prof. B.Stamm,
-		% Dr.\,A.Litvinenko,
-		% Dr.\,M.Kirchhart
-		% for a duration
-		% between SS19 and SS23.
-		%
-		% T.\,Vo would like to extend 
-		% heartfelt gratitude
-		% to the JARA-CSD research project,
-		% spearheaded by Dr.\,S.\,Braun and Dr.\,C.\,Hüter, 
-		% for their invaluable support.
-		% Additionally, 
-		% T.\,Vo would like to say thank to 
-		% Prof.\,Dr.\,R.\,Spatschek for the host at IEK-2 
-		% in FZ Jülich.
-		% Furthermore,
-		% T.\,Vo's teaching assistant experience
-		% in the courses of 
-		% Mathematische Grundlagen I, II, III, IV, and NumPDE
-		% at Computational Engineering Science (CES) at 
-		% RWTH Aachen University
-		% was made possible
-		% thanks to the guidance and mentorship of
-		% Prof.\,Dr.\,M.\,Torrilhon,
-		% Prof.\,Dr.\,M.\,Schlottke-Lakemper,
-		% Dr.\,R.\,Speck,
-		% Prof.\,Dr.\,B.\,Berkels,
-		% Dr.\,S.\,Braun,
-		% Prof.\,Dr.\,J.\,Kowalski,
-		% Dr.\,A.\,Jha,
-		% Prof.\,Dr.\,B.\,Stamm,
-		% Dr.\,A.\,Litvinenko, and
-		% Dr.\,M.\,Kirchhart,
-		% spanning from the
-		% Summer Semester of 2019 to the
-		% Summer Semester of 2023.
 		%
 		T.\,Vo expresses sincere gratitude 
 		to the JARA-CSD research project, 
@@ -706,52 +656,6 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 % ----------------------------------------------------------------------------------------------------------------
 \block{}
 {
-	% \vspace{-0.3em}
-	% \begin{minipage}{0.2\textwidth}
-	% 	\begin{center}
-	% 		\includegraphics[width=0.4\textwidth]{./floats/logos/oxford_blue.eps}
-	% 	\end{center}
-	% \end{minipage}
-	% \hfill
-	% \begin{minipage}{0.2\textwidth}
-	% 	\begin{center}
-	% 		\includegraphics[width=0.85\textwidth]{./floats/logos/obms23.eps}
-	% 	\end{center}
-	% \end{minipage}
-	% \hfill
-	% \begin{minipage}{0.2\textwidth}
-	% 	\begin{center}
-	% 		\includegraphics[width=0.85\textwidth]{./floats/logos/acomrwth.eps}
-	% 	\end{center}
-	% \end{minipage}
-	% \hfill
-	% \begin{minipage}{0.2\textwidth}
-	% 	\begin{center}
-	% 		\includegraphics[width=0.5\textwidth]{./floats/logos/fzj.eps}
-	% 	\end{center}
-	% \end{minipage}
-	%
-	% \vspace{-0.6em}
-	% \begin{minipage}{0.3\textwidth}
-	% 	\begin{center}
-	% 		\includegraphics[width=0.45\textwidth]{./floats/logos/oxford_blue_obms23.eps}
-	% 	\end{center}
-	% \end{minipage}
-	% \hfill
-	% \begin{minipage}{0.3\textwidth}
-	% 	\begin{center}
-	% 		\includegraphics[width=0.35\textwidth]{./floats/logos/acomrwth.eps}
-	% 	\end{center}
-	% \end{minipage}
-	% \hfill
-	% \begin{minipage}{0.3\textwidth}
-	% 	\begin{center}
-	% 		\includegraphics[width=0.25\textwidth]{./floats/logos/fzj.eps}
-	% 	\end{center}
-	% \end{minipage}
-	% \vspace{-0.6em}
-	%
-	% \vspace{-0.05em}
 	\vspace{-1mm}
 	\begin{minipage}{0.1\textwidth}
 		\begin{flushright}
